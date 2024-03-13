@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://tt0c3s4rb13v"
+path="res://.godot/imported/Npc5Sir.dialogue-68eb002292a6930ebc0613cab6af8e19.tres"
+
+[deps]
+
+source_file="res://Dialogos/Npc5Sir.dialogue"
+dest_files=["res://.godot/imported/Npc5Sir.dialogue-68eb002292a6930ebc0613cab6af8e19.tres"]
+
+[params]
+
+defaults=true

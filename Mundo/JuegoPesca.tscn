@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://bqh2vkqradqh7"]
+
+[ext_resource type="Script" path="res://Mundo/Fish.gd" id="1_413dq"]
+[ext_resource type="Texture2D" uid="uid://cica0laa5jfsn" path="res://Objetos/Water_01.png" id="2_fmmhj"]
+[ext_resource type="Script" path="res://Mundo/AnimatedSprite2D.gd" id="3_kgjd3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ocav"]
+atlas = ExtResource("2_fmmhj")
+region = Rect2(0, 0, 512, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qunb1"]
+atlas = ExtResource("2_fmmhj")
+region = Rect2(512, 0, 512, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00r1t"]
+atlas = ExtResource("2_fmmhj")
+region = Rect2(1024, 0, 512, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12jft"]
+atlas = ExtResource("2_fmmhj")
+region = Rect2(0, 768, 512, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhb4i"]
+atlas = ExtResource("2_fmmhj")
+region = Rect2(512, 768, 512, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy0rb"]
+atlas = ExtResource("2_fmmhj")
+region = Rect2(1024, 768, 512, 768)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c8u1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ocav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qunb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00r1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12jft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhb4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy0rb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eotao"]
+size = Vector2(8034.5, 3376.5)
+
+[node name="Fising" type="Node2D"]
+script = ExtResource("1_413dq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_c8u1k")
+frame_progress = 0.363202
+script = ExtResource("3_kgjd3")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-2562, -15)
+sprite_frames = SubResource("SpriteFrames_c8u1k")
+frame_progress = 0.431185
+script = ExtResource("3_kgjd3")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(2696, -23)
+sprite_frames = SubResource("SpriteFrames_c8u1k")
+frame_progress = 0.431185
+script = ExtResource("3_kgjd3")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(13, -411.75)
+shape = SubResource("RectangleShape2D_eotao")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

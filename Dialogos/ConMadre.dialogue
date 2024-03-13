@@ -1,0 +1,24 @@
+~ start
+set Status0.talking = true
+Arthur: pleb, pleb hey, do you hear me?
+- Of course sir, what do you need?
+	Arthur: Listen to me carefully pleb, I have lost my lucky chicken leg, if you find it I will give you about $200
+	set Status0.DoomStatus = "doomtard"
+- What do you want, beggar?
+	Arthur: Hey, be careful when you refer to European royalty.
+	Arthur: I offer you a deal, find my lucky chicken leg and in exchange I will give you about $170
+	set Status0.DoomStatus = "decente"
+Arthur: I have lost it in the western wastes, beware of dangers, pleb
+set Status0.talking = false
+=> END
+
+~ doomtard
+Arthur: Here's your bill, young man.
+Jack: But it's not even everything he promised me
+Arthur: Yes yes pleb, the rest is to save Europe
+=> END
+
+~ decente
+Jack: Have your trash and give me my money
+Jack: It's not even complete, you hungry ******. 
+=> END

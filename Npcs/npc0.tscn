@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://chw5bujav6kjy"]
+
+[ext_resource type="Script" path="res://Npcs/npc0.gd" id="1_qckgc"]
+[ext_resource type="Resource" uid="uid://4wu8jg0rgai8" path="res://Dialogos/Npc0.dialogue" id="2_x6p2n"]
+[ext_resource type="Texture2D" uid="uid://b2m77ajhil13" path="res://Jugador/Spriteshet.png" id="3_sak42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l357p"]
+atlas = ExtResource("3_sak42")
+region = Rect2(84, 32, 14, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vcks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l357p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3qhj"]
+size = Vector2(10, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3j16"]
+size = Vector2(258, 208)
+
+[node name="Npc0" type="CharacterBody2D"]
+script = ExtResource("1_qckgc")
+dialogo = ExtResource("2_x6p2n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_0vcks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_u3qhj")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_g3j16")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

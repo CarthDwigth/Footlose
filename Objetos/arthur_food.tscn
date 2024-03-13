@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdeoorkvs77yf"]
+
+[ext_resource type="Script" path="res://ArthurFood.gd" id="1_4q1l2"]
+[ext_resource type="Texture2D" uid="uid://c1xt4f5tkfp3c" path="res://Npcs/Arthurfood.png" id="2_yx3js"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62xvm"]
+size = Vector2(788, 678)
+
+[node name="ArthurFood" type="Node2D"]
+script = ExtResource("1_4q1l2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yx3js")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_62xvm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

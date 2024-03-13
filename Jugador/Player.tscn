@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://duybmk63wrptf"]
+
+[ext_resource type="Script" path="res://Jugador/Player.gd" id="1_fcdol"]
+[ext_resource type="Texture2D" uid="uid://dlb6gjjgwpw0w" path="res://Jugador/Player.png" id="2_gq13y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ba5x"]
+size = Vector2(9, 12)
+
+[sub_resource type="Animation" id="Animation_jhnm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mn27e"]
+resource_name = "walk_down"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19]
+}
+
+[sub_resource type="Animation" id="Animation_m6s8j"]
+resource_name = "walk_right"
+length = 0.32
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_dlln4"]
+resource_name = "walk_up"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mw13r"]
+_data = {
+"RESET": SubResource("Animation_jhnm0"),
+"walk_down": SubResource("Animation_mn27e"),
+"walk_right": SubResource("Animation_m6s8j"),
+"walk_up": SubResource("Animation_dlln4")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiolr"]
+size = Vector2(9, 12)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_fcdol")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_gq13y")
+hframes = 10
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 7)
+shape = SubResource("RectangleShape2D_3ba5x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mw13r")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.5, 7)
+shape = SubResource("RectangleShape2D_hiolr")

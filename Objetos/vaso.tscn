@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://bch0wk0w4y3u1"]
+
+[ext_resource type="Texture2D" uid="uid://w7ilhkysfdil" path="res://Objetos/vaso.png" id="1_8mqkb"]
+[ext_resource type="Script" path="res://Objetos/vaso.gd" id="1_xn3jp"]
+
+[sub_resource type="Animation" id="Animation_3rm5a"]
+resource_name = "Movida"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(13, 0), Vector2(20, 0), Vector2(-18, 0), Vector2(18, 0), Vector2(-25, 0), Vector2(14, 0), Vector2(29, 0), Vector2(-15, 0), Vector2(7, 0), Vector2(-7, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3j1b6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_68w4l"]
+_data = {
+"Movida": SubResource("Animation_3rm5a"),
+"RESET": SubResource("Animation_3j1b6")
+}
+
+[sub_resource type="Animation" id="Animation_4greu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7u5en"]
+resource_name = "Movida"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-25, 0), Vector2(-10, 0), Vector2(22, 0), Vector2(-25, 0), Vector2(0, 0), Vector2(10, 0), Vector2(-29, 0), Vector2(20, 0), Vector2(-18, 0), Vector2(0, 0), Vector2(14, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dawpe"]
+_data = {
+"Movida": SubResource("Animation_7u5en"),
+"RESET": SubResource("Animation_4greu")
+}
+
+[node name="Vaso" type="Node2D"]
+script = ExtResource("1_xn3jp")
+
+[node name="Vaso1" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+texture = ExtResource("1_8mqkb")
+
+[node name="AnimacionVaso" type="AnimationPlayer" parent="Vaso1"]
+libraries = {
+"": SubResource("AnimationLibrary_68w4l")
+}
+
+[node name="Vaso2" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+texture = ExtResource("1_8mqkb")
+
+[node name="AnimacionVaso2" type="AnimationPlayer" parent="Vaso2"]
+libraries = {
+"": SubResource("AnimationLibrary_68w4l")
+}
+
+[node name="Vaso3" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+texture = ExtResource("1_8mqkb")
+
+[node name="AnimacionVaso3" type="AnimationPlayer" parent="Vaso3"]
+libraries = {
+"": SubResource("AnimationLibrary_dawpe")
+}

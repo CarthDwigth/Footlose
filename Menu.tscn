@@ -1,0 +1,187 @@
+[gd_scene load_steps=7 format=3 uid="uid://dulv3x2yw4iwt"]
+
+[ext_resource type="Texture2D" uid="uid://dkncmc7238ln8" path="res://Objetos/Enjl-Starry Space Background/Enjl-Starry Space Background/preview.png" id="1_7ft4u"]
+[ext_resource type="Script" path="res://Menu.gd" id="1_jdc6p"]
+[ext_resource type="FontFile" uid="uid://7ro3arjuslt7" path="res://Dialogos/PixelAE-Bold.ttf" id="1_lgygc"]
+[ext_resource type="AudioStream" uid="uid://berfs3j17s3y4" path="res://Musica/JDSherbert - Minigame Music Pack [FREE]/mp3/JDSherbert - Minigame Music Pack - A Minor Distraction.mp3" id="3_jmywn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7ucr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7chkm"]
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 650.0
+script = ExtResource("1_jdc6p")
+
+[node name="Node2D4" type="Node2D" parent="."]
+
+[node name="Node2D3" type="Node2D" parent="Node2D4"]
+position = Vector2(0, 436)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D4/Node2D3"]
+texture_filter = 1
+position = Vector2(252, 0)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D4/Node2D3"]
+texture_filter = 1
+position = Vector2(505, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D4/Node2D3"]
+texture_filter = 1
+position = Vector2(761, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D4/Node2D3"]
+texture_filter = 1
+position = Vector2(907, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D4/Node2D3"]
+texture_filter = 1
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D4/Node2D3"]
+texture_filter = 1
+position = Vector2(252, 0)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Node2D2" type="Node2D" parent="Node2D4"]
+position = Vector2(0, 223)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D4/Node2D2"]
+texture_filter = 1
+position = Vector2(252, 0)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D4/Node2D2"]
+texture_filter = 1
+position = Vector2(505, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D4/Node2D2"]
+texture_filter = 1
+position = Vector2(761, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D4/Node2D2"]
+texture_filter = 1
+position = Vector2(907, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D4/Node2D2"]
+texture_filter = 1
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D4/Node2D2"]
+texture_filter = 1
+position = Vector2(252, 0)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Node2D" type="Node2D" parent="Node2D4"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D4/Node2D"]
+texture_filter = 1
+position = Vector2(252, 0)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D4/Node2D"]
+texture_filter = 1
+position = Vector2(505, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D4/Node2D"]
+texture_filter = 1
+position = Vector2(761, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D4/Node2D"]
+texture_filter = 1
+position = Vector2(907, 1)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D4/Node2D"]
+texture_filter = 1
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D4/Node2D"]
+texture_filter = 1
+position = Vector2(252, 0)
+texture = ExtResource("1_7ft4u")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_top = 73.0
+offset_right = 252.0
+offset_bottom = 253.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_lgygc")
+theme_override_font_sizes/font_size = 120
+text = "Footlose"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = 18.0
+offset_right = 56.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_lgygc")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_t7ucr")
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_lgygc")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_7chkm")
+text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jmywn")
+volume_db = -5.571
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

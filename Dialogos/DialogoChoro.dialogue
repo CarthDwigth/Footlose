@@ -1,0 +1,17 @@
+~ robo
+set Status0.Robado = true
+...: Hey hey hommie, do you have the time?.
+- Tell him the time
+	Jack: [[14:20|12:00|11:29]]
+	Take what you have in your hand
+	set Status0.Op = "1"
+- Escape
+	...: Where are you going little friend?
+	set Status0.Op = "2"
+if Status0.Op == "1":
+	...: Only that coins?, get out of here poor
+	set Status0.Robado = false
+if Status0.Op == "2":
+	...: Having only that you started to run away hahaha
+	set Status0.Robado = false
+=> END

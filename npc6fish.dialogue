@@ -1,0 +1,23 @@
+~ start
+set Status0.talking = true
+Annie: You need something ?
+- I'm looking for work
+	Annie: You're lucky, I have a hook to fish and I need merchandise, I will pay you for each fish you bring
+	Annie: You accept ?
+	- Yes
+		Annie: Go to the coast there is a stand marked with a sign, next to a cat
+		set Status0.fish = true
+		=> END
+- Are you looking for someone to fish with? 
+	Annie: You're lucky, I have a hook to fish and I need merchandise, I will pay you for each fish you bring.
+	Annie: You accept ?
+	- Yes
+		Annie: Go to the coast there is a stand marked with a sign, next to a cat
+		set Status0.fish = true
+set Status0.talking = false
+=> END
+
+~ comprar
+Annie: Have your money, don't tell anyone about the rotten ones
+set Status0.talking = false
+=> END

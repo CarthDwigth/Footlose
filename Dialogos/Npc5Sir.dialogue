@@ -1,0 +1,23 @@
+~ start
+set Status0.talking = true
+if Status0.ganadas == 3:
+	Nathan: I dont want play with u again
+	set Status0.talking = false
+	=> END
+Nathan: You look curious, do you want to play, for a few coins(35)?
+- Sure 
+	%2.5 You win
+	set Status0.ganadas += 1
+	set Status0.Jogado = false
+	set Status0.Money += 70
+	set Status0.Moneyto += 70
+	=> start
+	%2.5 You Lose
+	set Status0.Jogado = false
+	set Status0.Money -= 35
+	=> start
+- No, tranks 
+	
+set Status0.talking = false
+=> END
+

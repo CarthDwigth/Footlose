@@ -1,0 +1,11 @@
+~ start
+
+set Status0.talking = true
+Davinia: [[Hi|Hello|Howdy]] sir, do you need anything?
+Davinia: We just opened a recycling plant, we will pay you $9 for each recyclable bottle or can you bring
+set Status0.talking = false
+set Status0.reciclando = true
+=> END
+~ canready
+Davinia: Tranks honey!
+=> END

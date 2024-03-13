@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://daw4giiphuxbs"
+path="res://.godot/imported/ConMadre.dialogue-0bed01b96fd2969c77667a0aaa01df87.tres"
+
+[deps]
+
+source_file="res://Dialogos/ConMadre.dialogue"
+dest_files=["res://.godot/imported/ConMadre.dialogue-0bed01b96fd2969c77667a0aaa01df87.tres"]
+
+[params]
+
+defaults=true

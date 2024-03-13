@@ -1,0 +1,8 @@
+~ start
+set Status0.talking = true
+Ticket outside the city $900
+if Status0.Money >= 900:
+	- Run away from the city
+		set Status0.Go = true
+set Status0.talking = false
+=> END

@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://c530otfs4q133"]
+
+[ext_resource type="Script" path="res://Mundo/Inicio.gd" id="1_8hhvr"]
+[ext_resource type="PackedScene" uid="uid://d3orlvmv84udv" path="res://Mundo/cuarto.tscn" id="1_yncnr"]
+[ext_resource type="Resource" uid="uid://de2b52baq8hwp" path="res://Dialogos/Inicio.dialogue" id="2_2pmgn"]
+[ext_resource type="AudioStream" uid="uid://m6yjv1l8wpec" path="res://Musica/196782__yuval__drilling-neighbour.mp3" id="4_wmgmr"]
+
+[sub_resource type="Animation" id="Animation_m65t6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.709804)]
+}
+
+[sub_resource type="Animation" id="Animation_lekm8"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.709804), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3vp0h"]
+_data = {
+"RESET": SubResource("Animation_m65t6"),
+"fade": SubResource("Animation_lekm8")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8hhvr")
+dialogo = ExtResource("2_2pmgn")
+
+[node name="Cuarto" parent="." instance=ExtResource("1_yncnr")]
+position = Vector2(484, 270)
+
+[node name="Camera2D" type="Camera2D" parent="Cuarto"]
+position = Vector2(88, -94)
+zoom = Vector2(4, 4)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 9.0
+offset_right = 905.0
+offset_bottom = 506.0
+color = Color(0, 0, 0, 0.709804)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_3vp0h")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(582, -1548)
+stream = ExtResource("4_wmgmr")
+volume_db = 18.641
+autoplay = true
+
+[connection signal="animation_finished" from="ColorRect/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bjprc3wyv2i2"
+path="res://.godot/imported/npc4test.dialogue-bd184b6db7ae3ffb402063feb62fe69f.tres"
+
+[deps]
+
+source_file="res://Dialogos/npc4test.dialogue"
+dest_files=["res://.godot/imported/npc4test.dialogue-bd184b6db7ae3ffb402063feb62fe69f.tres"]
+
+[params]
+
+defaults=true

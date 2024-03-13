@@ -1,0 +1,32 @@
+~ start
+set Status0.talking = true
+set Status0.falado = true
+#Addon super util, "-", estas cosas marcan opciones segun donde esten
+#pueden mandarte denuevo a donde busques ir
+Jack: Good Morning
+Marilyn: You are late again
+- There was a problem with the bus
+	Marilyn: Anyway, here's your payroll.
+	Jack: But this isn't even half of what they promised me.
+	set Status0.talk_status = "mal"
+	set Status0.talking = false
+	set Status0.Money += 120
+	set Status0.Moneyto += 120
+- I don't work here anymore
+	Marilyn: ......
+	Jack: Only 90?, he had promised me MUCH more
+	set Status0.Money += 90
+	set Status0.Moneyto += 90
+	set Status0.talk_status = "bien"
+~ bien
+if Status0.talk_status == "bien":
+	Marilyn: I don't think you signed anything that said that.
+	....Now how do I get out of this dump?
+	set Status0.talking = false
+=> END
+~ mal
+if Status0.talk_status == "mal":
+	Marilyn: I don't remember signing any paper with more
+	....Now how do I get out of this dump?
+	set Status0.talking = false
+=> END

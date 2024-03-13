@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfokwfyjv46gq"]
+
+[ext_resource type="Script" path="res://Objetos/botella.gd" id="1_yfc53"]
+[ext_resource type="Texture2D" uid="uid://bbnf1g2k0hds7" path="res://Objetos/FOOD.png" id="2_ucvtm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qv3k"]
+atlas = ExtResource("2_ucvtm")
+region = Rect2(101, 135, 20, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cj16g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qv3k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7edag"]
+size = Vector2(186, 138)
+
+[node name="lata" type="Node2D"]
+script = ExtResource("1_yfc53")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cj16g")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7edag")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
