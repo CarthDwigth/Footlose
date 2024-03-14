@@ -2809,12 +2809,15 @@ texture = ExtResource("3_oo1t5")
 18:12/0 = 0
 18:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:12/0/physics_layer_0/angular_velocity = 0.0
+18:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:12/0 = 0
 19:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:12/0/physics_layer_0/angular_velocity = 0.0
+19:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:12/0 = 0
 20:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 20:12/0/physics_layer_0/angular_velocity = 0.0
+20:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 25:12/0 = 0
 25:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:12/0/physics_layer_0/angular_velocity = 0.0
@@ -2940,12 +2943,15 @@ texture = ExtResource("3_oo1t5")
 18:13/0 = 0
 18:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:13/0/physics_layer_0/angular_velocity = 0.0
+18:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:13/0 = 0
 19:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:13/0/physics_layer_0/angular_velocity = 0.0
+19:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:13/0 = 0
 20:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 20:13/0/physics_layer_0/angular_velocity = 0.0
+20:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 44:13/0 = 0
 44:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 44:13/0/physics_layer_0/angular_velocity = 0.0
@@ -39157,6 +39163,122 @@ scale = Vector2(0.5, 0.5)
 
 [node name="lata" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
 position = Vector2(-64, 33)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata27" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(47, -289)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata28" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-805, -3)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata29" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-1358, -70)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata30" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-1277, -418)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata31" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-1277, -933)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata32" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-926, -1340)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata33" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-1266, -1363)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata34" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(639, -311)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata35" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(1051, -320)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata36" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(1215, -24)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata37" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(1776, 48)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata38" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(1919, 290)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata39" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(2158, -29)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata40" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(2724, -129)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata41" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(3054, -102)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata42" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(2529, -577)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata43" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(2589, -817)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata44" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(2237, -1354)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata45" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(2608, -1439)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata46" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(1848, -1591)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata47" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(1313, -1603)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata48" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(898, -1813)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata49" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(945, -2175)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata50" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(683, -2044)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata51" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(280, -1426)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata52" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(101, -1431)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata53" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(-561, -1314)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata54" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(38, -742)
+scale = Vector2(0.5, 0.5)
+
+[node name="lata55" parent="Objetos/latas" instance=ExtResource("24_3agiu")]
+position = Vector2(662, -91)
 scale = Vector2(0.5, 0.5)
 
 [node name="lata2" parent="Objetos/latas" instance=ExtResource("24_3agiu")]

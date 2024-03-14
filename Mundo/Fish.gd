@@ -52,6 +52,7 @@ func _input(event):
 			
 func capturar_pez():
 	Status0.pescados += 1
+	Status0.pescadosTo +=1
 	pez.visible = false
 
 func comproba():
